@@ -26,7 +26,7 @@ This guide walks you through forking [this markdown site](https://github.com/way
   - [Step 3: Sync Your Blog Posts](#step-3-sync-your-blog-posts)
   - [Step 4: Run Locally](#step-4-run-locally)
   - [Step 5: Get Your Convex HTTP URL](#step-5-get-your-convex-http-url)
-  - [Step 6: Configure Netlify Redirects](#step-6-configure-netlify-redirects)
+  - [Step 6: Verify Edge Functions](#step-6-verify-edge-functions)
   - [Step 7: Deploy to Netlify](#step-7-deploy-to-netlify)
     - [Option A: Netlify CLI](#option-a-netlify-cli)
     - [Option B: Netlify Dashboard](#option-b-netlify-dashboard)
@@ -481,8 +481,9 @@ Your blog includes these API endpoints for search engines and AI:
 ### Posts not appearing
 
 1. Check that `published: true` in frontmatter
-2. Run `npm run sync` to sync posts
-3. Verify posts exist in Convex dashboard
+2. Run `npm run sync` to sync posts to development
+3. Run `npm run sync:prod` to sync posts to production
+4. Verify posts exist in Convex dashboard
 
 ### RSS/Sitemap not working
 
